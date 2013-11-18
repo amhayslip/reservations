@@ -1,0 +1,58 @@
+<html>
+<head>
+  <title>Javascript Bare</title>
+</head>
+<body>
+
+	<button id="reserve"></button>
+
+<script type="text/javascript">
+
+
+
+var reservations = ["Aaron", "Sarah", "Jack", "George"];
+var claimedReservations = [];
+
+var input = prompt("What is your name?");
+
+var found = false;
+
+for (var i = 0; i < reservations.length; i += 1) {
+	if (input === reservations[i]) {
+		alert("Welcome to the restraunt!");
+		found = true;
+		claimedReservations.push(input);
+		alert("Your resrvation has been claimed!");
+	}
+}
+
+console.log('current reservations', reservations);
+console.log('claimed reservations', claimedReservations);
+console.log('found var', found);
+
+if (found === false) {
+	claimedReservations.push(input);
+	alert("You've made a new reservation!");
+}
+
+var input = prompt("What is your name?");
+
+for (var i = 0; i < claimedReservations.length; i++) {
+	if (input === claimedReservations[i] && found === true) {
+		alert("Sorry! That reservation has already been claimed!");
+	}
+}
+
+console.log('found var', found);
+console.log('current reservations', reservations);
+console.log('claimed reservations', claimedReservations);
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
